@@ -1,0 +1,226 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: 100%/1.6em Arial;
+  background-color: #F2F2FD;
+}
+
+.appBlock {
+  width: 480px;
+  height: 860px;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.appBlock__appHeader {
+  width: 100%;
+  height: 25%;
+  background-image: url('img/appHeader__bg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.appHeader__phoneInfo {
+  height: 35px;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: space-between;
+  align-items: space-between;
+  background-color: rgba(0,0,0,0.5);
+  color: #fff;
+}
+.appHeader__phoneInfo div {
+  display: inline-block;
+  padding: 0 10px;
+  flex: 1;
+  line-height: 35px;
+  user-select: none;
+  cursor: default;
+}
+
+.phoneInfo__antenna {
+  text-align: left;
+}
+.phoneInfo__signal {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.phoneInfo__signal_true {
+  background-color: #fff;
+}
+
+.phoneInfo__time {
+  text-align: center;
+}
+
+.phoneInfo__battery {
+  text-align: right;
+  background-image: url('img/icons/phoneInfo__battery.png');
+  background-repeat: no-repeat;
+  background-position: 90% 50%;
+  background-size: 25px;
+}
+
+.appHeader__buttons {
+  display: -webkit-flex;
+  display: flex;
+  height: 25%;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #fff;
+}
+.appHeader__btn_back, .appHeader__btn_actions {
+  display: inline-block;
+  height: 100%;
+  padding: 0 10px;
+  background-repeat: no-repeat;
+  flex: 1;
+  user-select: none;
+  cursor: pointer;
+}
+.appHeader__btn_back {
+  background-image: url('img/icons/appHeader__btn_back.png');
+  background-position: 10px 50%;
+  background-size: 20px;
+}
+@keyframes movement {
+  from {background-position: 10px 50%;}
+  25% {background-position: 5px 50%;}
+  50% {background-position: 15px 50%;}
+  to {background-position: 10px 50%;}
+}
+.appHeader__btn_back:hover {
+  animation: movement  .8s ease-in-out;
+}
+.appHeader__btn_actions {
+  background-image: url('img/icons/appHeader__btn_actions.png');
+  background-position: 90% 50%;
+  background-size: 32px;
+}
+
+.appHeader__title {
+  position: absolute;
+  bottom: 15px;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 30px;
+}
+
+.appBlock__appContent {
+  position: relative;
+}
+
+.appBlock__addBtn {
+  position: absolute;
+  right: 20px;
+  top: -72px;
+  user-select: none;
+  cursor: pointer;
+}
+.appBlock__addBtn img {
+  transition: transform .4s ease;
+}
+.appBlock__addBtn:hover img {
+  transform: scale(1.05);
+}
+
+.appContent__tasks {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+
+.tasksBlock__day {
+  margin-bottom: 10px;
+  font-size: 1.6em;
+}
+
+.tasksBlock__task {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  border-bottom: 2px solid #E5E8EF;
+  padding: 20px 0;
+}
+.tasksBlock__task:last-child {
+  border-bottom: 0;
+}
+.task__check {
+  flex: 1;
+  height: 40px;
+  background-image: url('img/icons/task__checkBox.png');
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 38px;
+  cursor: pointer;
+  transition: .6s ease;
+}
+.task__check:hover {
+  background-image: url('img/icons/task__checkBox_check.png');
+  background-position: 0% 50%;
+}
+.task__icon {
+  flex: 1;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 40px;
+}
+.task__icon_phone {
+  background-image: url('img/icons/task__icon_phone.png');
+}
+.task__icon_brush {
+  background-image: url('img/icons/task__icon_brush.png');
+}
+.task__icon_browser {
+  background-image: url('img/icons/task__icon_browser.png');
+}
+.task__icon_email {
+  background-image: url('img/icons/task__icon_email.png');
+}
+
+.task__definition {
+  flex: 4;
+}
+.task__name {
+  font-size: 1.4em;
+  color: #45457E;
+}
+.task__name_deleted {
+  color: #E5E8EF;
+  text-decoration: line-through;
+}
+.task__comment {
+  font-size: 1.2em;
+  color: #ACB4C6;
+}
+.task__control {
+  flex: 1;
+  font-size: 40px;
+  text-align: right;
+  color: #E5E8EF;
+  cursor: pointer;
+  user-select: none;
+  transition: color .6s ease;
+}
+.task__control_true, .task__control:hover {
+  color: #FFC00C;
+}
+.task__control_delete {
+  height: 30px;
+  background-image: url('img/icons/task__control_delete.png');
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+  background-size: 30px;
+}
